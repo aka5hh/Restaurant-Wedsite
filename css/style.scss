@@ -435,9 +435,9 @@ a:focus {
           font-size: 2.5rem;
           font-weight: bold
         }
-      }
-
-      p {}
+      }    
+      
+      
 
       a {
         @include hero_btn($primary1, $white, 10px, 30px, 45px);
