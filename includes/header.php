@@ -17,14 +17,16 @@
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
-<?php 
+<?php
 //homepage header is different other pages. 
-if(basename($_SERVER['REQUEST_URI'])=='index.php'){
+if (basename($_SERVER['REQUEST_URI']) == 'index.php') {
 ?>
+
   <body>
-<?php }else{ ?>
-  <body class="sub_page">
-<?php } ?>
+  <?php } else { ?>
+
+    <body class="sub_page">
+    <?php } ?>
     <div class="hero_area">
       <div class="bg-box">
         <img src="images/hero-bg.jpg" alt="">
@@ -59,7 +61,7 @@ if(basename($_SERVER['REQUEST_URI'])=='index.php'){
                 <a href="" class="user_link">
                   <i class="fa fa-user" aria-hidden="true"></i>
                 </a>
-                <a class="cart_link" href="#">              
+                <a class="cart_link" href="#">
                 </a>
                 <form class="form-inline">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">

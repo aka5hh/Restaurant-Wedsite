@@ -98,6 +98,6 @@
   </script>
   <!-- End Google Map -->
 
-</body>
+  </body>
 
-</html>
+  </html>
