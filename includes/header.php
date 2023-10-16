@@ -19,12 +19,9 @@
 </head>
 <?php
 //homepage header is different other pages. 
-if (basename($_SERVER['REQUEST_URI']) == 'index.php') {
-?>
-
+if (basename($_SERVER['REQUEST_URI']) == 'index.php') { ?>
   <body>
   <?php } else { ?>
-
     <body class="sub_page">
     <?php } ?>
     <div class="hero_area">
