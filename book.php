@@ -6,7 +6,7 @@ get_header();
 </div>
 <section class="book_section layout_padding">
   <div class="container">
-    <div class="heading_container">
+    <div class="heading_container ">
       <h2>
         Book A Table
       </h2>
@@ -54,15 +54,9 @@ get_header();
           </form>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="map_container ">
-          <div id="googleMap"></div>
-        </div>
-      </div>
-    </div>
+     </div>
   </div>
 </section>
-
 <?php
 get_footer();
 ?>

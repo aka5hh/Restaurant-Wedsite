@@ -4,8 +4,7 @@ get_header();
 ?>
 </div>
 <section class="about_section layout_padding">
-  <div class="container  ">
-
+  <div class="container">
     <div class="row">
       <div class="col-md-6 ">
         <div class="img-box">
@@ -29,6 +28,27 @@ get_header();
             Read More
           </a>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="book_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Our Location
+      </h2>
+    </div>
+    <div class="heading_container heading_center">
+      <div class="col-md-6">
+        <div class="map_container ">
+          <div id="googleMap"></div>
+        </div>
+        <div class="heading_container heading_center">
+      <h6>
+        Banani 11 R/A Dhaka.
+      </h6>
+    </div>
       </div>
     </div>
   </div>
