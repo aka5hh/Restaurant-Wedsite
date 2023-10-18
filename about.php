@@ -33,26 +33,42 @@ get_header();
   </div>
 </section>
 <section class="book_section layout_padding">
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2>
-        Our Location
-      </h2>
-    </div>
-    <div class="heading_container heading_center">
-      <div class="col-md-6">
-        <div class="map_container ">
-          <div id="googleMap"></div>
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Write Your Honest Review
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="">
+              <div>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+              </div>
+              <div>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+              </div>
+              <div>
+              
+                <textarea class="form-control" placeholder="Leave a review here" name="message" id="message" style="height: 100px"></textarea>                    
+              </div>
+              <div class="btn_box">
+                <button>
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="heading_container heading_center">
-      <h6>
-        Banani 11 R/A Dhaka.
-      </h6>
-    </div>
+        <div class="col-md-6">
+          <div class="map_container ">
+            <div id="googleMap"></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 <?php
 get_footer();
 ?>
