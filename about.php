@@ -50,7 +50,6 @@ get_header();
                 <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
               </div>
               <div>
-              
                 <textarea class="form-control" placeholder="Leave a review here" name="message" id="message" style="height: 100px"></textarea>                    
               </div>
               <div class="btn_box">

@@ -14,10 +14,10 @@
   <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
   <link rel="stylesheet" href="css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
   <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
   <link href="css/all.min.css" rel="stylesheet" />
   <link href="css/all.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
 </head>
 <?php
 //homepage header is different other pages. 

@@ -2,7 +2,6 @@
 require_once('functions\functions.php');
 get_header();
 ?>
-
 </div>
 <section class="book_section layout_padding">
   <div class="container">
@@ -54,7 +53,7 @@ get_header();
           </form>
         </div>
       </div>
-     </div>
+    </div>
   </div>
 </section>
 <?php
