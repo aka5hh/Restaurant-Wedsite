@@ -11,11 +11,8 @@ if ($_SESSION['role'] == 1) {
             <div class="card-header">
                 <div class="row">
                     <div class="col-md-8 card_title_part">
-                        <i class="fab fa-gg-circle"></i>All Reviews
-                    </div>
-                    <!-- <div class="col-md-4 card_button_part">
-                        <a href="#" class="btn btn-sm btn-dark"><i class="fas fa-plus-circle"></i>Link</a>
-                    </div> -->
+                        <i class="fab fa-gg-circle"></i>All Booking Information
+                    </div>                   
                 </div>
             </div>
             <div class="card-body">
@@ -24,27 +21,31 @@ if ($_SESSION['role'] == 1) {
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
+                            <th>Phone</th>
                             <th>Email</th>                           
-                            <th>Message</th>
+                            <th>No. of People</th>                           
+                            <th>Date</th>
                             <th>Manage</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $sel = "SELECT * FROM reviews ORDER BY reviewer_id DESC" ;
+                        $sel = "SELECT * FROM book_table ORDER BY bookt_id DESC" ;
                         $Q = mysqli_query($con, $sel);
                         while ($data = mysqli_fetch_assoc($Q)) {
                         ?>
                             <tr>
-                                <td> <?= $data['reviewer_id'] ?> </td>                          
-                                <td> <?= $data['reviewer_name'] ?> </td>                          
-                                <td> <?= $data['reviewer_email'] ?> </td>                                                   
-                                <td> <?= $data['reviewer_review'] ?> </td>                          
+                                <td> <?= $data['bookt_id'] ?> </td>                          
+                                <td> <?= $data['bookt_name'] ?> </td>                          
+                                <td> <?= $data['bookt_phone'] ?> </td>                          
+                                <td> <?= $data['bookt_email'] ?> </td>                                                   
+                                <td> <?= $data['bookt_persons'] ?> </td>                          
+                                <td> <?= $data['bookt_date'] ?> </td>                          
                                 <td>
                                     <div class="btn-group btn_group_manage" role="group">
                                         <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Manage</button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="delete-message.php?md=<?= $data['reviewer_id'] ?>">Delete</a></li>
+                                            <li><a class="dropdown-item" href="delete-book-table.php?md=<?= $data['bookt_id'] ?>">Delete</a></li>
                                         </ul>
                                     </div>
                                 </td>
