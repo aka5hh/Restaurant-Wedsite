@@ -33,41 +33,67 @@ get_header();
   </div>
 </section>
 <section class="book_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Write Your Honest Review
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-              </div>
-              <div>
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
-              </div>
-              <div>
-                <textarea class="form-control" placeholder="Leave a review here" name="message" id="message" style="height: 100px"></textarea>                    
-              </div>
-              <div class="btn_box">
-                <button>
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
+  <div class="container">
+    <div class="heading_container">
+      <h2>
+        Write Your Honest Review
+      </h2>
+    </div>
+    <?php
+    if (!empty($_POST)) {
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $message = $_POST['message'];
+
+      $insert = "INSERT INTO reviews(reviewer_name,reviewer_email,reviewer_review)
+      VALUES('$name','$email','$message')";
+
+      if (!empty($name)) {
+        if (!empty($email)) {
+          if (!empty($message)) {
+            if (mysqli_query($con, $insert)) {
+              echo "We have recived your message. Thank you for contacting us.";
+            }
+          } else {
+            echo "Please write a message";
+          }
+        } else {
+          echo "Please enter corect email";
+        }
+      } else {
+        echo "Please write your name";
+      }
+    }
+    ?>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form_container">
+          <form method="post" action="">
+            <div>
+              <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+            </div>
+            <div>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+            </div>
+            <div>
+              <textarea class="form-control" placeholder="Leave a review here" name="message" id="message" style="height: 100px"></textarea>
+            </div>
+            <div class="btn_box">
+              <button>
+                Submit
+              </button>
+            </div>
+          </form>
         </div>
-        <div class="col-md-6">
-          <div class="map_container ">
-            <div id="googleMap"></div>
-          </div>
+      </div>
+      <div class="col-md-6">
+        <div class="map_container ">
+          <div id="googleMap"></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 <?php
 get_footer();
 ?>

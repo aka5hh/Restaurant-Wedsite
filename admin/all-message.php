@@ -24,8 +24,7 @@ if ($_SESSION['role'] == 1) {
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>Email</th>
-                            <th>Subject</th>
+                            <th>Email</th>                           
                             <th>Message</th>
                             <th>Manage</th>
                         </tr>
@@ -33,22 +32,21 @@ if ($_SESSION['role'] == 1) {
                     <tbody>
                         <?php
 
-                        $sel = "SELECT * FROM contact ORDER BY con_id DESC" ;
+                        $sel = "SELECT * FROM reviews ORDER BY reviewer_id DESC" ;
                         $Q = mysqli_query($con, $sel);
                         while ($data = mysqli_fetch_assoc($Q)) {
                         ?>
                             <tr>
-                                <td> <?= $data['con_id'] ?> </td>                          
-                                <td> <?= $data['con_name'] ?> </td>                          
-                                <td> <?= $data['con_email'] ?> </td>                          
-                                <td> <?= $data['con_subject'] ?> </td>                          
-                                <td> <?= $data['con_message'] ?> </td>                          
+                                <td> <?= $data['reviewer_id'] ?> </td>                          
+                                <td> <?= $data['reviewer_name'] ?> </td>                          
+                                <td> <?= $data['reviewer_email'] ?> </td>                                                   
+                                <td> <?= $data['reviewer_review'] ?> </td>                          
                                 <td>
                                     <div class="btn-group btn_group_manage" role="group">
                                         <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Manage</button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="view-message.php?mv=<?= $data['con_id'] ?>">View</a></li>                                       
-                                            <li><a class="dropdown-item" href="delete-message.php?md=<?= $data['con_id'] ?>">Delete</a></li>
+                                            <li><a class="dropdown-item" href="view-message.php?mv=<?= $data['reviewer_id'] ?>">View</a></li>                                       
+                                            <li><a class="dropdown-item" href="delete-message.php?md=<?= $data['reviewer_id'] ?>">Delete</a></li>
                                         </ul>
                                     </div>
                                 </td>
