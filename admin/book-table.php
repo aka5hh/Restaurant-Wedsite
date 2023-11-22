@@ -23,7 +23,7 @@ if ($_SESSION['role'] == 1) {
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>                           
-                            <th>No. of People</th>                           
+                            <th>No. of People Coming </th>                           
                             <th>Date</th>
                             <th>Manage</th>
                         </tr>
@@ -39,7 +39,7 @@ if ($_SESSION['role'] == 1) {
                                 <td> <?= $data['bookt_name'] ?> </td>                          
                                 <td> <?= $data['bookt_phone'] ?> </td>                          
                                 <td> <?= $data['bookt_email'] ?> </td>                                                   
-                                <td> <?= $data['bookt_persons'] ?> </td>                          
+                                <td> <?= $data['bookt_person'] ?> </td>                          
                                 <td> <?= $data['bookt_date'] ?> </td>                          
                                 <td>
                                     <div class="btn-group btn_group_manage" role="group">

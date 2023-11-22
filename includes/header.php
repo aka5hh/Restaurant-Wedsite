@@ -1,3 +1,11 @@
+<?php
+$db_name='restaurant_web';
+$db_user='root';
+$db_pass='';
+$db_host='localhost';
+
+$con = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
+?>
 <!DOCTYPE html>
 <html>
 
@@ -26,10 +34,16 @@ if (basename($_SERVER['REQUEST_URI']) == 'index.php') { ?>
   <?php } else { ?>
     <body class="sub_page">
     <?php } ?>
+    <?php
+    $selb = "SELECT * FROM banners WHERE ban_status = 1 ORDER BY ban_id";
+    $Qb=mysqli_query($con,$selb);
+    while($banner=mysqli_fetch_assoc($Qb)){
+    ?>
     <div class="hero_area">
       <div class="bg-box">
-        <img src="images/hero-bg.jpg" alt="">
+        <img src="admin/uploads/<?=$banner["ban_image"] ?>" alt="">
       </div>
+      <?php }?>
       <header class="header_section">
         <div class="container">
           <nav class="navbar navbar-expand-lg custom_nav-container ">

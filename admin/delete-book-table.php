@@ -2,9 +2,9 @@
 require_once('functions/functions.php');
 
 $id= $_GET['md'];
-$del="DELETE FROM book_table WHERE book_id='$id'";
+$del="DELETE FROM book_table WHERE bookt_id='$id'";
 if(mysqli_query($con,$del)){
-    header('location: all-message.php');
+    header('location: book-table.php');
 }else{
-    echo"Failded your tast";
+    echo"Failded your task";
 }

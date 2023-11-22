@@ -27,7 +27,7 @@ get_header();
             if (!empty($person)) {
               if (!empty($date)) {
                 if (mysqli_query($con, $insert)) {
-                  echo "We have recived your message. Thank you for contacting us.";
+                  echo "We have recived your booking information. Thank you.";
                 }
               } else {
                 echo "Please select the date you want a book the table";

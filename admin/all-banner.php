@@ -25,6 +25,7 @@ if ($_SESSION['role'] == 1) {
                             <th>Title</th>
                             <th>Subtitle</th>
                             <th>Button</th>
+                            <th>Active Status</th>
                             <th>Image</th>
                             <th>Manage</th>
                         </tr>
@@ -40,6 +41,7 @@ if ($_SESSION['role'] == 1) {
                                 <td> <?= substr($data['ban_title'],0,15) ?> </td>
                                 <td> <?= substr($data['ban_subtitle'],0,25) ?>... </td>
                                 <td> <?= $data['ban_button'] ?> </td>
+                                <td> <?= $data['ban_status'] ?> </td>
                                 <td>
                                     <?php if ($data['ban_image'] != "") { ?>
                                         <img height="40" class="img200" src="uploads/<?= $data['ban_image'] ?> " alt="Banner" />
@@ -52,7 +54,8 @@ if ($_SESSION['role'] == 1) {
                                         <button type="button" class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Manage</button>
                                         <ul class="dropdown-menu">
                                             <li><a class="dropdown-item" href="view-banner.php?bv=<?= $data['ban_id'] ?>">View</a></li>
-                                            <li><a class="dropdown-item" href="edit-banner.php?be=<?= $data['ban_id'] ?>">Edit</a></li>
+                                            <li><a class="dropdown-item" href="active-banner.php?ba=<?= $data['ban_id'] ?>">Active</a></li>
+                                            <li><a class="dropdown-item" href="disable-banner.php?bdd=<?= $data['ban_id'] ?>">Deactivate</a></li>
                                             <li><a class="dropdown-item" href="delete-banner.php?bd=<?= $data['ban_id'] ?>">Delete</a></li>
                                         </ul>
                                     </div>
