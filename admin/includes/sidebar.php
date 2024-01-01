@@ -22,7 +22,6 @@
                         <?php } ?>
                         <li><a href="all-message.php"><i class="fas fa-comments"></i> Reviews</a></li>
                         <li><a href="book-table.php"><i class="fas fa-utensils" style="color: #ffffff;"></i> Booking</a></li>
-                        <li><a href="#"><i class="fas fa-globe"></i> Live Site</a></li>
                         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </div>
