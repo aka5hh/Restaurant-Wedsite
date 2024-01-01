@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2023 at 11:51 AM
+-- Generation Time: Jan 01, 2024 at 10:58 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -64,7 +64,7 @@ CREATE TABLE `book_table` (
 --
 
 INSERT INTO `book_table` (`bookt_id`, `bookt_name`, `bookt_phone`, `bookt_email`, `bookt_person`, `bookt_date`) VALUES
-(2, 'LA LALU', '0123645879', 'admin@example.com', 5, '2023-11-30');
+(3, 'Akash', '1-083401123-18', 'aka@gmail.com', 3, '2024-01-03');
 
 -- --------------------------------------------------------
 
@@ -79,6 +79,37 @@ CREATE TABLE `contact` (
   `con_subject` varchar(250) NOT NULL,
   `con_message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu_items`
+--
+
+CREATE TABLE `menu_items` (
+  `id` int(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `description` text NOT NULL,
+  `price` int(10) NOT NULL,
+  `category` varchar(20) NOT NULL,
+  `image_path` varchar(70) NOT NULL,
+  `status` int(11) DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `menu_items`
+--
+
+INSERT INTO `menu_items` (`id`, `name`, `description`, `price`, `category`, `image_path`, `status`) VALUES
+(1, 'Delicious Burger', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 15, 'burger', 'menu_1704145094_488535.png', 1),
+(2, 'Delicious Pizza', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 20, 'pizza', 'menu_1704145208_412047.png', 1),
+(4, 'Delicious Pizza 2', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 17, 'pizza', 'menu_1704145306_835024.png', 1),
+(5, 'Delicious Pizza 3', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 15, 'pizza', 'menu_1704145340_961533.png', 1),
+(6, 'Tasty Burger', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 12, 'burger', 'menu_1704145377_246818.png', 1),
+(7, 'Tasty Burger 2', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 14, 'burger', 'menu_1704145444_567359.png', 1),
+(8, 'Delicious Pasta', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 18, 'pasta', 'menu_1704145518_129348.png', 1),
+(9, 'Delicious Pasta 2', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 10, 'pasta', 'menu_1704145548_585377.png', 1),
+(10, 'French Fries', 'Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus sed eaque', 10, 'fries', 'menu_1704145596_916683.png', 1);
 
 -- --------------------------------------------------------
 
@@ -98,7 +129,8 @@ CREATE TABLE `reviews` (
 --
 
 INSERT INTO `reviews` (`reviewer_id`, `reviewer_name`, `reviewer_email`, `reviewer_review`) VALUES
-(1, 'Lal Mia', 'lalmia@gmail.com', 'poajd -=- jqdjas 0-j jaspoj =-30j joadojaq-');
+(1, 'Lal Mia', 'lalmia@gmail.com', 'poajd -=- jqdjas 0-j jaspoj =-30j joadojaq-'),
+(2, 'Sanjana', 'sanjana@mail.com', 'The restaurant was quite nice. ');
 
 -- --------------------------------------------------------
 
@@ -176,6 +208,12 @@ ALTER TABLE `contact`
   ADD PRIMARY KEY (`con_id`);
 
 --
+-- Indexes for table `menu_items`
+--
+ALTER TABLE `menu_items`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
@@ -211,7 +249,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT for table `book_table`
 --
 ALTER TABLE `book_table`
-  MODIFY `bookt_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `bookt_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -220,10 +258,16 @@ ALTER TABLE `contact`
   MODIFY `con_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `menu_items`
+--
+ALTER TABLE `menu_items`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `reviewer_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `reviewer_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `roles`
